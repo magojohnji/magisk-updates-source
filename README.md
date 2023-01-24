@@ -19,5 +19,5 @@ There are 6 versions here.
 - Alpha version. You can go to author(s)' repository [here](https://github.com/vvb2060/magisk_files).
 - Delta versions (include Stable, Beta, Canary, Debug version). You can go to author(s)' repository [here](https://github.com/huskydg/magisk-files).
 
-Thanks [Topjohnwu](https://github.com/topjohnwu), [vvb2060](https://github.com/vvb2060), [HuskyDG](https://github.com/huskydg). 
+Thanks [topjohnwu](https://github.com/topjohnwu), [vvb2060](https://github.com/vvb2060), [HuskyDG](https://github.com/huskydg). 
 
