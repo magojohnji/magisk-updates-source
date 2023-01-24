@@ -2,7 +2,7 @@
 
 This repo hosts magisk updates source. 
 
-- ⚠ Please DON'T use it if you don't trust them. `#f03c15`
+- 'WARNING!' **⚠ Please DON'T use them if you don't trust them.** 
 
 ![](https://github.com/topjohnwu/Magisk/raw/master/docs/images/logo.png "Magisk Logo")
 
