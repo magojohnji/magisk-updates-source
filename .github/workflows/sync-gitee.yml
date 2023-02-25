@@ -23,7 +23,7 @@ jobs:
                git branch -M main
                git pull origin main --allow-unrelated
                git push -u origin main -f
-                   
+               
             - name: Sync To Gitee
               uses: wearerequired/git-mirror-action@master
               env:
