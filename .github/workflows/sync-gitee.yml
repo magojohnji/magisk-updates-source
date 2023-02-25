@@ -1,4 +1,4 @@
-name: Sync To Gitee
+name: Clone & Sync To Gitee
 
 on: [push, delete, create]
 
@@ -6,7 +6,29 @@ jobs:
     sync:
         runs-on: ubuntu-latest
         steps:
-            - name: Sync to Gitee
+            - name: Clone Magisk Repos
+              run: mkdir magisk-updates-source
+                   cd magisk-updates-source
+                   mkdir repos
+                   mkdir ./repos/delta
+                   mkdir ./repos/alpha
+                   mkdir ./repos/official
+                   mkdir ./repos/lite
+                   git clone https://github.com/HuskyDG/magisk-files.git ./repos/delta
+                   git clone https://github.com/vvb2060/magisk_files.git ./repos/alpha
+                   git clone https://github.com/topjohnwu/magisk-files.git ./repos/official
+                   cd ..
+                   git config --global user.name "magojohnji"
+                   git config --global user.email magojohnji@outlook.com
+                   git init
+                   git add .
+                   git commit -m "Git Push"
+                   git remote add origin https://github.com/magojohnji/magisk-update-source.git
+                   git branch -M main
+                   git pull origin main --allow-unrelated
+                   git push -u origin main -f
+                   
+            - name: Sync To Gitee
               uses: wearerequired/git-mirror-action@master
               env:
                   SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
