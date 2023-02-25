@@ -8,18 +8,18 @@ jobs:
         steps:
             - name: Clone Magisk Repos
               run: |
-               git pull https://github.com/magojohnji/magisk-update-source.git
-               git clone https://github.com/magojohnji/magisk-update-source.git
-               git clone https://github.com/HuskyDG/magisk-files.git ./magisk-update-source/delta
-               git clone https://github.com/vvb2060/magisk_files.git ./magisk-update-source/alpha
-               git clone https://github.com/topjohnwu/magisk-files.git ./magisk-update-source/official
-               cd magisk-update-source
+               git clone https://github.com/magojohnji/magisk-updates-source.git
+               git clone https://github.com/HuskyDG/magisk-files.git ./magisk-updates-source/delta
+               git clone https://github.com/vvb2060/magisk_files.git ./magisk-updates-source/alpha
+               git clone https://github.com/topjohnwu/magisk-files.git ./magisk-updates-source/official
+               cd magisk-updates-source
                git config --global user.name magojohnji
                git config --global user.email magojohnji@outlook.com
+               git pull https://github.com/magojohnji/magisk-updates-source.git
                git init
                git add .
                git commit -m "Git Push"
-               git remote add origin https://github.com/magojohnji/magisk-update-source.git
+               git remote add origin https://github.com/magojohnji/magisk-updates-source.git
                git branch -M main
                git pull origin main --allow-unrelated
                git push -u origin main -f
